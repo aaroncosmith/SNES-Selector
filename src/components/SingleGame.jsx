@@ -26,6 +26,7 @@ const SingleGame = ({game, index}) => {
                         <p>Release date: {game.released} </p>
                         <p>{game.rating}</p>
                         <GamePicture src={game.background_image} alt="Game Screenshot"></GamePicture>
+                        <p><a href="https://www.google.com/search?q=super%20nintendo%20">Find out more...</a></p>
                 </GameBox>
         
         )

@@ -6,9 +6,11 @@ class Gamecard extends Component {
         super(props);
         this.state = {games: []};
     }
+
+    getRandomPage() 
     async componentDidMount() {
         try {
-            const response = await fetch('https://api.rawg.io/api/games?platforms=79&developers=nintendo&page_size=100')
+            const response = await fetch('https://api.rawg.io/api/games?platforms=79&page_size=20&page=30')
             const data = await response.json();
             this.setState({games: data.results})
         } catch (error) {
@@ -19,11 +21,10 @@ class Gamecard extends Component {
         const { games } = this.state;
         return (
             <div>
+
                 
-                {
-                games.map((game, i) => (
-                    <SingleGame game={game} key={i} />
-                ))}
+                    <SingleGame games={games} key={i} />
+                
             </div>
         );
     }

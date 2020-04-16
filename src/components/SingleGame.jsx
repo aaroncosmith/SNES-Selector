@@ -1,16 +1,32 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const GameBox = styled.div`
+        background-color: lightgrey;
+        padding: 20px;
+        width: 75%;
+        height: 80%;
+
+` 
+const Title = styled.h1`
+        font-family: 'Press Start 2P', cursive;
+        font-size: 24px;
+
+`
+
+const GamePicture = styled.img`
+        height: 300px;
+`
 
 const SingleGame = ({game, index}) => {
         
         return (
-                <div>
-                        <p>{game.id}</p>
-                        <p>{game.name}</p>
-                        <p>{game.rating}</p>
+                <GameBox>
+                        <Title>{game.name}</Title>
                         <p>Release date: {game.released} </p>
-                        <p>Genre: {game.genre}</p>
-                        <img src={game.background_image} alt="Game Screenshot"></img>
-                </div>
+                        <p>{game.rating}</p>
+                        <GamePicture src={game.background_image} alt="Game Screenshot"></GamePicture>
+                </GameBox>
         
         )
 }

@@ -1,6 +1,7 @@
 import React from 'react';
-import RandomGame from './components/RandomGame';
 import styled from 'styled-components';
+import SwitchGame from './components/SwitchGame';
+import SuperNavbar from './components/SuperNavbar'
 
 const Content = styled.div`
   background-color: blue;
@@ -9,7 +10,8 @@ const Content = styled.div`
 function App() {
   return (
     <Content className="App">
-      <RandomGame/>
+      <SuperNavbar/>
+      <SwitchGame/>
     </Content>
   );
 }

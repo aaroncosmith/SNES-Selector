@@ -24,9 +24,8 @@ const SingleGame = ({game, index}) => {
                 <GameBox>
                         <Title>{game.name}</Title>
                         <p>Release date: {game.released} </p>
-                        <p>{game.rating}</p>
+                        <p>Rating: {game.rating}/5</p>
                         <GamePicture src={game.background_image} alt="Game Screenshot"></GamePicture>
-                        <p><a href="https://www.google.com/search?q=super%20nintendo%20">Find out more...</a></p>
                 </GameBox>
         
         )

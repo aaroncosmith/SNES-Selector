@@ -6,10 +6,15 @@ import PCGame from './components/PCGame';
 import PlaystationFourGame from './components/PlaystationFourGame';
 import SwitchGame from './components/SwitchGame';
 import XboxOneGame from './components/XboxOneGame';
+import background from './background.jpg';
 import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom"
 
 const Content = styled.div`
-  background-color: blue;
+  background-image: url(${background});
+  background-position: bottom;
+  background-size: 100%;
+  background-repeat: repeat-x;
+  background-color: black;
 
 `
 const Nav = styled.ul`
@@ -19,6 +24,7 @@ const Nav = styled.ul`
   overflow:hidden;
   background-color: black;
 `
+
 const NavItem = styled.li`
   float: left;
 `
@@ -128,4 +134,5 @@ function XboxOne() {
     <XboxOneGame/>
   )
 }
+
 export default App;

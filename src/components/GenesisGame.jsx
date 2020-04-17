@@ -34,6 +34,7 @@ class GenesisGame extends Component {
             const game = this.getSingleGame(data.results);
             console.log(game)
             this.setState({games:[game]})
+            
         } catch (error) {
             console.log("Error is ", error.message)
         }
@@ -48,6 +49,7 @@ class GenesisGame extends Component {
                 games.map((oneGame, i) => (
                     <SingleGame game={oneGame} key={i} />
                 ))}
+                <button onClick="window.location.reload();">Refresh Page</button>
             </GameWrapper>
         );
     }

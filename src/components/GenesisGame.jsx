@@ -6,8 +6,8 @@ const GameWrapper = styled.div`
     display: flex;
     justify-content: center;
     text-align: center;
-
 `
+
 
 class GenesisGame extends Component {
     constructor(props) {

@@ -24,6 +24,7 @@ const GameContent = styled.div`
 const TextHolder = styled.div`
 `
 
+
 const SingleGame = ({game, index}) => {
         
         return (

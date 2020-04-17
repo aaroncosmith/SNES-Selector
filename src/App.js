@@ -12,31 +12,49 @@ const Content = styled.div`
   background-color: blue;
 
 `
+const Nav = styled.ul`
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow:hidden;
+  background-color: black;
+`
+const NavItem = styled.li`
+  float: left;
+`
+const StyledLink = styled(Link)`
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+`;
+
+
 function App() {
   return (
     <Router>
       <Content className="App">
-        <ul>
-          <li>
-            <Link to='/'>SNES</Link>
-          </li>
-          <li>
-            <Link to='/genesis'>Genesis</Link>
-          </li>
-          <li>
-            <Link to='/pc'>PC</Link>
-          </li>
-          <li>
-            <Link to='/ps4'>PS4</Link>
-          </li>
-          <li>
-            <Link to='/switch'>Switch</Link>
-          </li>
-          <li>
-            <Link to='/xboxone'>Xbox One</Link>
-          </li>
-        </ul>
-        <hr />
+        <Nav>
+          <NavItem>
+            <StyledLink to='/'>SNES</StyledLink>
+          </NavItem>
+          <NavItem>
+            <StyledLink to='/genesis'>Genesis</StyledLink>
+          </NavItem>
+          <NavItem>
+            <StyledLink to='/pc'>PC</StyledLink>
+          </NavItem>
+          <NavItem>
+            <StyledLink to='/ps4'>PS4</StyledLink>
+          </NavItem>
+          <NavItem>
+            <StyledLink to='/switch'>Switch</StyledLink>
+          </NavItem>
+          <NavItem>
+            <StyledLink to='/xboxone'>Xbox One</StyledLink>
+          </NavItem>
+        </Nav>
         <Switch>
           <Route exact path="/">
             <SNES/>

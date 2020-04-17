@@ -26,7 +26,7 @@ class XboxOneGame extends Component {
     
     async componentDidMount() {
         try {
-            const page = this.getRandomPage(40) 
+            const page = this.getRandomPage(160) 
             const response = await fetch(`https://api.rawg.io/api/games?platforms=1&page_size=20&page=${page}`)
             const data = await response.json();
             console.log(data);

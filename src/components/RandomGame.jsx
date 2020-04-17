@@ -9,7 +9,6 @@ const GameWrapper = styled.div`
 
 `
 
-
 class RandomGame extends Component {
     constructor(props) {
         super(props);
@@ -24,8 +23,6 @@ class RandomGame extends Component {
     getSingleGame = (arr) => {
         return arr[Math.floor(Math.floor(Math.random()*arr.length))]
     }
-    
-    
     
     async componentDidMount() {
         try {

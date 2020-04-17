@@ -30,11 +30,24 @@ const StyledLink = styled(Link)`
     text-decoration: none;
 `;
 
+const Logo = styled.h1`
+  list-style-type: none;
+  margin: 0;
+  padding-top: 15px;
+  padding-left: 15px;
+  overflow:hidden;
+  background-color: black;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 24px;
+`
+
 
 function App() {
   return (
     <Router>
       <Content className="App">
+        <Logo>What Game?</Logo>
         <Nav>
           <NavItem>
             <StyledLink to='/'>SNES</StyledLink>
